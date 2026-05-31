@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { WA_LINK_TEXT } from '../constants'
 import useReveal from '../hooks/useReveal'
 import './Services.css'
 
@@ -119,7 +120,7 @@ function Services() {
 
               <a
                 className="modal-cta"
-                href="https://wa.me/6281234567890?text=Halo%20Save%20Shoes%20Jakarta%2C%20saya%20tertarik%20dengan%20layanan%20..."
+                href={WA_LINK_TEXT}
                 target="_blank"
                 rel="noopener noreferrer"
               >

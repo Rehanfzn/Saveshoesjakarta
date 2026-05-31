@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { WA_LINK } from '../constants'
 import './WhatsAppBubble.css'
 
 function WhatsAppBubble() {
@@ -11,7 +12,7 @@ function WhatsAppBubble() {
 
   return (
     <a
-      href="https://wa.me/6281234567890"
+      href={WA_LINK}
       target="_blank"
       rel="noopener noreferrer"
       className="wa-bubble"
