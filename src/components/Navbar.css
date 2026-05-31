@@ -1,0 +1,229 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 16px 24px 0;
+  display: flex;
+  justify-content: center;
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled {
+  padding: 10px 24px 0;
+}
+
+.navbar-container {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 8px 10px 20px;
+  border-radius: 60px;
+  transition: all 0.35s ease;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.navbar.scrolled .navbar-container {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 8px 6px 8px 16px;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #fff;
+  z-index: 1001;
+}
+
+.logo-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 50%;
+  transition: width 0.3s ease, height 0.3s ease;
+}
+
+.navbar.scrolled .logo-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #fff;
+  transition: font-size 0.3s ease;
+}
+
+.navbar.scrolled .logo-text {
+  font-size: 14px;
+}
+
+.logo-accent {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 40px;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nav-link.active {
+  color: #fff;
+  background: var(--accent);
+}
+
+@media (min-width: 901px) {
+  .nav-link.active {
+    background: var(--gold);
+    color: var(--text-dark);
+  }
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  z-index: 1001;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-toggle.active span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.navbar-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 14px 16px 0;
+  }
+
+  .navbar.scrolled {
+    padding: 8px 16px 0;
+  }
+
+  .navbar-container {
+    padding: 8px 4px 8px 14px;
+    max-width: 100%;
+    border-radius: 50px;
+  }
+
+  .navbar-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    background: rgba(17, 43, 60, 0.97);
+    backdrop-filter: blur(16px);
+    box-shadow: -4px 0 24px rgba(0, 0, 0, 0.08);
+    transition: right 0.35s ease;
+    padding: 80px 24px 40px;
+    border-radius: 0;
+  }
+
+  .navbar-menu.active {
+    right: 0;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+  }
+
+  .nav-link.active {
+    color: var(--gold);
+    background: var(--gold-light);
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-container {
+    padding: 6px 2px 6px 12px;
+  }
+
+  .logo-text {
+    font-size: 13px;
+  }
+
+  .navbar.scrolled .logo-text {
+    font-size: 12px;
+  }
+
+  .logo-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .navbar.scrolled .logo-icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}

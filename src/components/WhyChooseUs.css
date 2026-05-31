@@ -1,0 +1,134 @@
+.whychoose {
+  padding: 100px 0;
+  background: var(--text-dark);
+  position: relative;
+}
+
+.whychoose-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.whychoose-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 56px;
+}
+
+.whychoose-eyebrow {
+  display: inline-flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold);
+  background: var(--gold-light);
+  padding: 5px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.whychoose-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #f1f5f9;
+  margin: 0 0 12px;
+  letter-spacing: -0.5px;
+}
+
+.whychoose-title-accent {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.whychoose-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.whychoose-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.whychoose-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 40px 32px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.whychoose-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.whychoose-card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.whychoose-card:hover .whychoose-card-icon {
+  background: var(--gold-light);
+  color: var(--gold);
+}
+
+.whychoose-card-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 10px;
+}
+
+.whychoose-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .whychoose-title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .whychoose {
+    padding: 72px 0;
+  }
+
+  .whychoose-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 450px;
+    margin: 0 auto;
+  }
+
+  .whychoose-title {
+    font-size: 26px;
+  }
+
+  .whychoose-card {
+    padding: 32px 24px;
+  }
+}
