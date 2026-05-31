@@ -4,20 +4,20 @@ import './BeforeAfter.css'
 
 const examples = [
   {
-    before: new URL('../assets/images/hero-shoe.jpg', import.meta.url).href,
-    after: new URL('../assets/images/deep-clean.jpg', import.meta.url).href,
+    before: '/asset before-after/before deepclean.png',
+    after: '/asset before-after/after deepclean.png',
     label: 'Deep Cleaning',
     desc: 'Sepatu putih kotor kembali bersih bersinar setelah perawatan deep cleaning.',
   },
   {
-    before: new URL('../assets/images/gallery-1.jpg', import.meta.url).href,
-    after: new URL('../assets/images/repaint.jpg', import.meta.url).href,
+    before: '/asset before-after/before repain.png',
+    after: '/asset before-after/after repain.png',
     label: 'Repaint & Restoration',
     desc: 'Warna sepatu yang pudar dikembalikan dengan cat premium, hasil seperti baru.',
   },
   {
-    before: new URL('../assets/images/unyellowing.jpg', import.meta.url).href,
-    after: new URL('../assets/images/hero-shoe.jpg', import.meta.url).href,
+    before: '/asset before-after/before unyellowing.png',
+    after: '/asset before-after/after yellowing.png',
     label: 'Unyellowing',
     desc: 'Sol sepatu yang menguning kembali putih cemerlang tanpa residu kimia.',
   },

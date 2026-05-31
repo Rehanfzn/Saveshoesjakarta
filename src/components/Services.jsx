@@ -4,7 +4,7 @@ import './Services.css'
 
 const services = [
   {
-    img: new URL('../assets/images/deep-clean.jpg', import.meta.url).href,
+    img: '/perawatan/deepclean.png',
     title: 'Deep Cleaning',
     desc: 'Pencucian menyeluruh luar dan dalam untuk sepatu harian agar bebas kuman dan bau.',
     price: 'Mulai Rp 50.000',
@@ -17,7 +17,7 @@ const services = [
     ],
   },
   {
-    img: new URL('../assets/images/unyellowing.jpg', import.meta.url).href,
+    img: '/perawatan/unyellowing.png',
     title: 'Unyellowing',
     desc: 'Mengembalikan sol sepatu yang menguning (midsole) menjadi putih cerah kembali.',
     price: 'Mulai Rp 75.000',
@@ -29,7 +29,7 @@ const services = [
     ],
   },
   {
-    img: new URL('../assets/images/repaint.jpg', import.meta.url).href,
+    img: '/perawatan/repaint.png',
     title: 'Repaint & Restoration',
     desc: 'Mengembalikan warna sepatu yang pudar atau rusak agar tajam kembali.',
     price: 'Mulai Rp 150.000',

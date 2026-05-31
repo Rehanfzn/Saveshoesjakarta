@@ -3,9 +3,9 @@ import './Navbar.css'
 
 const NAV_ITEMS = [
   { label: 'Beranda', href: '#home' },
-  { label: 'Mengapa Kami', href: '#why-us' },
+  { label: 'Tentang Kami', href: '#why-us' },
   { label: 'Layanan', href: '#services' },
-  { label: 'Cara Order', href: '#how-it-works' },
+  { label: 'Bahan Sepatu', href: '#gallery' },
   { label: 'Kontak', href: '#contact' },
 ]
 

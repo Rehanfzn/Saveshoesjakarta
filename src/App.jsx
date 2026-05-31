@@ -20,10 +20,10 @@ function App() {
         <Hero />
         <WhyChooseUs />
         <Services />
-        <Testimonials />
         <Gallery />
         <BeforeAfter />
         <Faq />
+        <Testimonials />
         <HowItWorks />
       </main>
       <Footer />

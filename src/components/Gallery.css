@@ -50,7 +50,6 @@
   color: rgba(255, 255, 255, 0.6);
 }
 
-/* ── Materials Wrapper ── */
 .materials-wrapper {
   display: flex;
   gap: 48px;
@@ -80,7 +79,6 @@
   opacity: 1;
 }
 
-/* ── Materials List ── */
 .materials-list {
   flex: 1;
   display: flex;
@@ -101,6 +99,8 @@
   transition: all 0.3s ease;
   width: 100%;
   border-left: 3px solid transparent;
+  position: relative;
+  flex-wrap: wrap;
 }
 
 .material-item:hover {
@@ -130,6 +130,7 @@
   display: flex;
   flex-direction: column;
   gap: 4px;
+  flex: 1;
 }
 
 .material-name {
@@ -153,6 +154,178 @@
 
 .material-item.active .material-desc {
   color: rgba(255, 255, 255, 0.65);
+}
+
+.material-care-tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--gold);
+  background: rgba(212, 168, 83, 0.12);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 26px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.material-item:hover .material-care-tag {
+  background: var(--gold);
+  color: var(--text-dark);
+}
+
+.material-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  padding: 24px;
+}
+
+.material-modal {
+  background: transparent;
+  border-radius: 20px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalIn 0.3s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(16px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.material-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.material-modal-close:hover {
+  background: var(--gold);
+  color: var(--text-dark);
+  transform: rotate(90deg);
+}
+
+.material-modal-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.material-modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.material-modal-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+}
+
+.material-modal-section {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.material-modal-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 12px;
+}
+
+.material-modal-heading svg {
+  flex-shrink: 0;
+}
+
+.material-modal-section:first-of-type .material-modal-heading svg {
+  color: #16a34a;
+}
+
+.material-modal-section:last-of-type .material-modal-heading svg {
+  color: #dc2626;
+}
+
+.material-modal-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.material-modal-list li {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  padding-left: 20px;
+  position: relative;
+}
+
+.do-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(22, 163, 74, 0.15);
+  border: 2px solid #16a34a;
+}
+
+.dont-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(220, 38, 38, 0.15);
+  border: 2px solid #dc2626;
 }
 
 @media (max-width: 1024px) {
@@ -192,6 +365,14 @@
   .materials-list {
     width: 100%;
   }
+
+  .material-modal {
+    max-width: 500px;
+  }
+
+  .material-modal-body {
+    padding: 24px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -205,5 +386,27 @@
 
   .material-desc {
     font-size: 12px;
+  }
+
+  .material-care-tag {
+    margin-left: 26px;
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .material-modal-body {
+    padding: 20px;
+  }
+
+  .material-modal-section {
+    padding: 16px;
+  }
+
+  .material-modal-close {
+    top: 8px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
   }
 }
