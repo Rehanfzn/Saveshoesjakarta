@@ -124,7 +124,7 @@ function Services() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Pesan Sekarang
+                konsultasi sekarang
               </a>
             </div>
           </div>

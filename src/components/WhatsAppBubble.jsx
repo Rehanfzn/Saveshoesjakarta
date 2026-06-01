@@ -26,7 +26,7 @@ function WhatsAppBubble() {
       </div>
       {showTooltip && (
         <div className="wa-bubble-tooltip">
-          Ada yang bisa kami bantu?
+          Konsultasi sekarang
         </div>
       )}
     </a>
