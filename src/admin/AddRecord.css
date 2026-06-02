@@ -1,0 +1,193 @@
+.add-record {
+  max-width: 780px;
+}
+
+.record-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.form-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.form-card-step {
+  width: 28px;
+  height: 28px;
+  background: var(--gold);
+  color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--heading);
+  flex-shrink: 0;
+}
+
+.form-card-header h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+  font-family: var(--heading);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.required {
+  color: #ef4444;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 10px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-family: var(--sans);
+  transition: all 0.2s;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px var(--gold-light);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: #cbd5e1;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.input-disabled {
+  background: #f8fafc !important;
+  color: var(--text-gray);
+  cursor: not-allowed;
+  border-style: dashed !important;
+}
+
+/* ── Price Summary ── */
+.price-summary {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  display: flex;
+  justify-content: flex-end;
+  gap: 24px;
+}
+
+.price-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.price-label {
+  font-size: 0.75rem;
+  color: var(--text-light);
+}
+
+.price-amount {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--heading);
+}
+
+.price-total {
+  padding-left: 24px;
+  border-left: 1px solid #e2e8f0;
+}
+
+.price-total .price-amount {
+  font-size: 1.1rem;
+  color: var(--gold);
+}
+
+/* ── Actions ── */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.btn-save-new {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+.btn-save-new:hover {
+  background: var(--accent-hover) !important;
+}
+
+@media (max-width: 500px) {
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .price-summary {
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+  }
+
+  .price-total {
+    padding-left: 0;
+    border-left: none;
+  }
+}

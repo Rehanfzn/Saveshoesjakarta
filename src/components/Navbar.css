@@ -272,6 +272,15 @@
   transform: translateX(-50%) translateY(8px);
 }
 
+.nav-dropdown-header {
+  padding: 6px 14px 4px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
 .nav-dropdown-item {
   display: flex;
   align-items: center;
@@ -317,6 +326,10 @@
   .nav-dropdown-mobile {
     display: block;
     width: 100%;
+  }
+
+  .nav-dropdown-mobile .nav-dropdown-header {
+    padding-left: 24px;
   }
 
   .nav-dropdown-mobile-link {

@@ -47,7 +47,7 @@ function Footer() {
           <div className="footer-bottom-grid">
             <div className="footer-map">
               <iframe
-                src="https://maps.google.com/maps?q=-6.1780747,106.7530785&z=17&output=embed&hl=id"
+                src="https://maps.google.com/maps?q=-6.17808,106.7556534&z=17&output=embed&hl=id"
                 width="100%"
                 height="260"
                 style={{ border: 0, borderRadius: '12px' }}

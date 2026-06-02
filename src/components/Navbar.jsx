@@ -117,6 +117,7 @@ function Navbar() {
                 </button>
 
                 <div className={`nav-dropdown-menu${storeOpen ? ' show' : ''}`}>
+                  <div className="nav-dropdown-header">Daftar Cabang</div>
                   {item.items.map((sub) => (
                     <a
                       key={sub.label}
@@ -131,6 +132,7 @@ function Navbar() {
                 </div>
 
                 <div className="nav-dropdown-mobile">
+                  <div className="nav-dropdown-header">Daftar Cabang</div>
                   {item.items.map((sub) => (
                     <a
                       key={sub.label}
