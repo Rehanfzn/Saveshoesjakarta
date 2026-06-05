@@ -28,24 +28,24 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <div className="footer-bottom-container">
-          <div className="footer-info">
-            <div className="footer-logo">
-              <img
-                className="footer-logo-img"
-                src="/Logo%20save%20shoes.jpg"
-                alt="Save Shoes Jakarta"
-              />
-              <span className="footer-logo-text">SAVE SHOES</span>
-            </div>
-            <p className="footer-desc">
-              Jasa perawatan dan cuci sepatu premium di Jakarta. 
-              Sepatu bersih, wangi, dan seperti baru lagi.
-            </p>
-          </div>
-
+          <div className="footer-bottom-container">
           <div className="footer-bottom-grid">
-            <div className="footer-map">
+            <div className="footer-left">
+              <div className="footer-info">
+                <div className="footer-logo">
+                  <img
+                    className="footer-logo-img"
+                    src="/Logo%20save%20shoes.jpg"
+                    alt="Save Shoes Jakarta"
+                  />
+                  <span className="footer-logo-text">SAVE SHOES</span>
+                </div>
+                <p className="footer-desc">
+                  Jasa perawatan dan cuci sepatu premium di Jakarta. 
+                  Sepatu bersih, wangi, dan seperti baru lagi.
+                </p>
+              </div>
+              <div className="footer-map">
               <iframe
                 src="https://maps.google.com/maps?q=-6.17808,106.7556534&z=17&output=embed&hl=id"
                 width="100%"
@@ -56,6 +56,7 @@ function Footer() {
                 referrerPolicy="no-referrer-when-downgrade"
                 title="Lokasi Save Shoes Jakarta"
               />
+            </div>
             </div>
               <div className="footer-links">
                 <div className="footer-col">
